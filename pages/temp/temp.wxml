@@ -1,0 +1,116 @@
+<view class='big' wx="{{shop}}">
+  <swiper class="banner" circular='ture' indicator-dots="{{indicatorDots}}" autoplay="ture  " interval="{{interval}}" duration="{{duration}}" indicator-color="#b2b2b2" indicator-active-color="#e82d2d">
+    <block wx:for="{{banner}}">
+      <swiper-item>
+        <image src="{{item.seximgs}}" class="slide-image" />
+
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+
+
+  <view class='list-shop clearfix'>
+    <view class='price'>
+      <text class='price-1'>{{'￥'+shop.tgprice}}</text>
+      <text class='price-2'>{{'￥'+shop.price}}</text>
+      <image class='fenxiang' bindtap='fenxiang' src='../images/home/zhuanfa.svg'></image>
+      <view class='share'>分享</view>
+      <button class="zhuanfa" open-type="share" id='{{shop.id}}'></button>
+    </view>
+    <view class='temp-1'> {{shop.title}} </view>
+    <view class='temp-2'>
+
+      <text>{{shop.info}}</text>
+    </view>
+  </view>
+  <view class='just'>
+    <view class='top'>
+      <text class='top-1'>正品清仓</text>
+      <text class='top-2'>放心品质</text>
+      <text class='top-3'>低价清仓</text>
+    </view>
+    <view class='bottom '>
+      <text>全场包邮</text>
+      <text>7天退换</text>
+      <text>48小时发货</text>
+      <text>假一赔十</text>
+    </view>
+  </view>
+  <view class='collect'>
+    <view class='left'>
+      <view class='collect-1' bindtap='shoucang' id="{{shop.id}}">
+        <image src='../images/home/shoucang.svg'></image>
+        <text>收藏</text>
+      </view>
+      <view class='collect-2' bindtap='kefu' id='{{shop.id}}'>
+        <image src='../images/home/kefu.svg'></image>
+        <text>客服</text>
+        <button class="kefu" open-type="contact" session-from="weapp"></button>
+
+      </view>
+    </view>
+   <form report-submit bindsubmit='formSubmit'>
+<button class='collect-3'bindtap='temp' id='{{shop.id}}' form-type='submit'>
+{{'￥'+shop.tgprice+'立即开团'}}
+</button>
+
+</form>
+    
+    
+  </view>
+  <view class='t0'>
+    <text class='t1'>{{num.count}}人正在开团，可直接参与</text>
+    <text class='t2' bindtap='cantuan' id='{{shop.id}}'>更多>></text>
+  </view>
+  <view class='shop-list1 clearfix' wx:for="{{pingtuan}}" wx:key="{{index}}">
+    <image class='list-1' src='{{item.picurl}}'></image>
+    <view class='list-2'>{{item.username}}</view>
+    <view class='list-3'>{{'还差'+ item.people +'人拼成'}}</view>
+    <view class='list-4' bindtap="Offered" id='{{item.gid}}' data-index="{{index}}">去参团</view>
+  </view>
+  <view class='evaluate'>
+    <text class='evaluate-1'>商品评价({{commentNub}})</text>
+    <text class='evaluate-2' bindtap='examine' id='{{shop.id}}'>查看全部</text>
+  </view>
+  <view wx:for="{{comment}}">
+    <view class='user'>
+      <view class='portrait'>
+        <image src="{{item.picurl}}"></image>
+        <text class='p-r'>{{item.username}}</text>
+      </view>
+      <view class='user-e'>
+        <block wx:if="{{item.plimg !=null}}">
+          <view class='user-v'>
+            <image src="{{'http://shop.mqvt6.cn'+item.plimg}}"></image>
+          </view>
+        </block>
+      </view>
+      <view class='user-d'>{{item.text}}</view>
+      <view class='user-q'>{{item.times}}</view>
+    </view>
+  </view>
+  <view class="adc" wx="{{shop}}">
+    <image class='intorduce1' src="{{shop.img1}}" mode="widthFix"></image>
+    <image class='intorduce1' src="{{shop.img2}}" mode='widthFix'></image>
+  </view>
+</view>
+<view class='tui'>
+  <image class='tuijian' src='../images/home/tuijian.svg'></image>
+  <text class='ti'>为你推荐</text>
+</view>
+
+  <view class='flex'>
+    <view class='flex-1'wx:for="{{list}}" bindtap='group' id="{{item.id}}">
+      <image class='flex-image' src='{{item.img}}'></image>
+      <view class='flex-text'>{{item.title}} </view>
+      <view class='f-p'>
+        <view class='det'>{{'￥'+item.tgprice}}</view>
+        <view class='sales'>{{'已团'+item.sales+'件'}}</view>
+      </view>
+    </view>
+  </view> 
+<view class='shop-11'>没有更多了..</view>
+
+

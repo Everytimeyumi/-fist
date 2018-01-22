@@ -1,0 +1,58 @@
+<!--pages/mine/mine.wxml-->
+<view class='user'>
+  <image class='user-big' src=''></image>
+  <image class='user-head' src='{{userInfo.avatarUrl}}'></image>
+  <view class='name'>{{userInfo.nickName}}</view>
+
+</view>
+
+<view class='user-indent'  bindtap='indent' >
+  <text class='indent-1'>我的订单</text>
+  <text class='indent-2'>所有订单</text>
+</view>
+
+<view class='user-list'>
+    <view class='list-1'bindtap="temp">
+      <image src='../images/home/daiping.svg'></image>
+      <text>待拼团</text>
+    </view>
+    <view class='list-1' bindtap="shop">
+      <image src='../images/home/daifahuo.svg'></image>
+      <text>待发货</text>
+    </view>
+    <view class='list-1'bindtap="goods" >
+      <image src='../images/home/daishouhuo.svg'></image>
+      <text>待收货</text>
+    </view>
+    <view class='list-1' bindtap="achieve">
+      <image src='../images/home/daipingjia.svg'></image>
+      <text>待评价</text>
+    </view>
+  
+
+</view>
+
+<view class='information'>
+   <text>我的客服</text>
+</view>
+<button class="information-1" open-type="contact" session-from="weapp"></button>
+
+<view class='information' bindtap='location' id="1">
+   <text>收货地址</text>
+  <image></image>
+</view>
+<view class='information'bindtap='collect' id="1" >
+   <text>我的收藏</text>
+  <image></image>
+</view>
+<view class='black'>
+</view>
+
+
+
+
+
+
+
+
+

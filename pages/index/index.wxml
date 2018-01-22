@@ -1,0 +1,85 @@
+<swiper class="banner"  circular='ture' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255, 255, 255, 0.5)" indicator-active-color="#e82d2d">
+  <block wx:for="{{banner}}">
+    <swiper-item>
+      <image src="{{item.img}}"  bindtap='group' id="{{item.gid}}" class="slide-image" />
+
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='zhe'>
+  <image src='../images/home/zhe.svg' class='zhe-i'></image>
+  <text class='zhe-t'>折扣拼团</text>
+</view>
+
+<view class='big' wx:for="{{list}}" wx:if="{{index<2}}">
+
+  <view class='price'>
+    <image class='cosmetics' src="{{item.img}}" bindtap='group' id="{{item.id}}">
+
+      <!-- <view class='temp'>{{item.people+'人团'}}</view> -->
+    </image>
+  </view>
+  <view class='shop-text'>
+    <text bindtap='group' id="{{item.id}}">{{item.title}}</text>
+
+  </view>
+  <view class='seckill'>
+    <view class='left'>￥{{item.tgprice}}</view>
+    <view class='middle'>￥{{item.price}}</view>
+    <view class='right'>{{'已团: '+item.num}}</view>
+
+
+  </view>
+
+  <view class='away-1'>
+
+
+     <form report-submit bindsubmit='formSubmit'>
+      <button class='away' bindtap='group' id="{{item.id}}" form-type='submit'>
+       立即去拼
+      </button>
+
+    </form> 
+    <!-- <view class='away' bindtap='group' id="{{item.id}}"> 立即去拼</view> -->
+  </view>
+
+
+</view>
+
+
+
+<view class='shop-1'>
+  <image src='../images/home/hot.svg'></image>
+  <text>热门拼团</text>
+
+
+</view>
+
+<!-- 商品列表 -->
+<view class='shop-list' wx:for="{{list}}" wx:if="{{index>1}}">
+
+
+  <view class='left'>
+    <image src="{{item.img}}" bindtap='group' id="{{item.id}}"></image>
+  </view>
+
+
+  <view class='right'>
+    <view class='right-1' bindtap='group' id="{{item.id}}">{{item.title}}</view>
+    <view class='right-2'>{{item.info.slice(0,3)}}</view>
+    <view class='right-3'> {{'已团'+item.sales+'件'}}</view>
+    <view class='right-4'>{{'￥'+item.tgprice}}</view>
+    <view class='right-5'>{{'￥'+item.price}}</view>
+     <!-- <view class='right-6' bindtap='group' id="{{item.id}}">立即去拼</view>  -->
+    <form report-submit bindsubmit='formSubmit'>
+      <button class='right-6' bindtap='group' id="{{item.id}}" form-type='submit'>
+        立即去拼
+      </button>
+
+    </form> 
+  </view>
+
+
+</view>
+<view class='shop-11'>没有更多商品了..</view>

@@ -1,0 +1,31 @@
+<!--pages/shop/shop.wxml-->
+
+<view class='head' wx:for="{{shop}}">
+  <view class='top'>
+
+    <view class='name'>
+      <text class='left'>{{'收货人：'+item.sname}}</text>
+      <text class='phone'>{{'电话：'+item.phone}}</text>
+    </view>
+    <view class="add">
+      <text>{{'收货地址：'+item.forms}}</text>
+    </view>
+  </view>
+
+
+  <view class='default'>
+    <!-- <view class='d-left'>默认地址</view> -->
+    <view class='d-middle' bindtap='redact' id="{{item.id}}">编辑</view>
+    <view class='d-right' bindtap='remove' id="{{item.id}}">删除</view>
+  </view>
+
+
+
+</view>
+
+
+<view class='add-shop' bindtap='addshop' id="1">
+  <text>添加新地址</text>
+
+
+</view>

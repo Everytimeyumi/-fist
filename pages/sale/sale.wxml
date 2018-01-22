@@ -1,0 +1,43 @@
+<!--pages/sale/sale.wxml-->
+<view class='t-list'>
+  <text>团购系列</text>
+</view>
+<view class='shop-1'>
+  <view class='left'></view>
+  <view class='middle'>
+    <text>屈臣氏骨胶原护手霜滋润保湿秋冬季男女手部防干裂80g*2</text>
+    <view class='middle-1'> 保湿款</view>
+  </view>
+  <view class='right'>
+    <text class='right-t'>￥0.01</text>
+    <text class='right-b'>×1</text>
+  </view>
+</view>
+<view class='t-sale'>
+  <text>仅退款 退款成功</text>
+</view>
+<view class='bottom'>
+  <view class='bottom-1'> 查看详情</view>
+
+</view>
+<view class='t-list'>
+  <text>团购系列</text>
+</view>
+<view class='shop-1'>
+  <view class='left'></view>
+  <view class='middle'>
+    <text>屈臣氏骨胶原护手霜滋润保湿秋冬季男女手部防干裂80g*2</text>
+    <view class='middle-1'> 保湿款</view>
+  </view>
+  <view class='right'>
+    <text class='right-t'>￥0.01</text>
+    <text class='right-b'>×1</text>
+  </view>
+</view>
+<view class='t-sale'>
+  <text>仅退款 退款成功</text>
+</view>
+<view class='bottom'>
+  <view class='bottom-1'> 查看详情</view>
+
+</view>

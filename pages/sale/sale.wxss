@@ -1,0 +1,116 @@
+/* pages/sale/sale.wxss */
+page{
+  overflow-x: hidden;
+}
+.t-list{
+  width: 750rpx;
+	height: 90rpx;
+	background-color: #ffffff;
+
+}
+.t-list text{
+  height: 26rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 90rpx;
+	letter-spacing: 0px;
+	color: #222222;
+  margin-left: 30rpx;
+}
+.shop-1 {
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+  margin-top: 10rpx;
+}
+
+.shop-1 .left {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: red;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.shop-1 .middle {
+  width: 455rpx;
+  height: 55rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 30rpx;
+  letter-spacing: 0px;
+  color: #222;
+  float: left;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.shop-1 .right {
+  width: 52rpx;
+  height: 15rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #444;
+  float: right;
+  position: relative;
+}
+
+.right-t {
+  position: absolute;
+  top: 25rpx;
+  right: 33rpx;
+}
+
+.right-b {
+  position: absolute;
+  top: 80rpx;
+  right: 33rpx;
+}
+.middle-1 {
+  height: 18rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 20rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+.t-sale{
+ width: 750rpx;
+	height: 60rpx;
+	background-color: #ffffff;
+}
+.t-sale text{
+ 
+	height: 23rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 24rpx;
+	line-height: 60rpx;
+	letter-spacing: 0px;
+	color: #ff0066;
+  margin-left: 50rpx;
+}
+.bottom {
+  width: 750rpx;
+  height: 90rpx;
+  border-top: 1rpx solid #f5f5f5;
+  border-bottom: 20rpx solid #f5f5f5;
+}
+
+.bottom-1 {
+  width: 140rpx;
+  height: 60rpx;
+  border-radius: 4rpx;
+  border: solid 1px #f06;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  line-height: 60rpx;
+  text-align: center;
+  float: right;
+  margin-top: 15rpx;
+  margin-right: 30rpx;
+}

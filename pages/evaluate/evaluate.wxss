@@ -1,0 +1,157 @@
+page{
+  overflow-x: hidden;
+ position: relative;
+}
+
+.star-image {
+  position: absolute;
+  top: 38rpx;
+  width: 50rpx;
+  height: 50rpx;
+  
+
+}
+
+ .item {
+  position: absolute;
+  top: 0rpx;
+  width: 50rpx;
+  height: 50rpx;
+ 
+} 
+.shop{
+  width:750rpx;
+  height: 120rpx;
+}
+.shop-l{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: red;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  
+  float: left;
+}
+.shop-l image{
+  width:100rpx;
+  height:100rpx;
+
+}
+
+
+
+.shop-r{
+  height: 120rpx;
+  float: left;
+  font-size: 30rpx;
+  position: relative;
+  
+
+}
+.text{
+	font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	line-height: 120rpx;
+	color: #222222;
+  float: left;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.xingxing{
+  float: left;
+  position: relative;
+  height: 120rpx;
+}
+.input{
+  width: 750rpx;
+	height: 380rpx;
+	background-color: #ffffff;
+  border: 1rpx solid #f5f5f5;
+  font-size: 28rpx;
+  padding-left:30rpx;
+ 
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 20rpx solid #f5f5f5;
+  position: relative;
+}
+.input text{
+  margin: 30rpx;
+}
+.save-btn{
+  width: 750rpx;
+  position: fixed;
+  bottom: 0rpx;
+}
+.text-1{
+	font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	line-height: 120rpx;
+	color: #222222;
+  float: left;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.shop-r-1{
+  height: 120rpx;
+  float: left;
+  font-size: 30rpx;
+  position: relative;
+  
+
+}
+.text-2{
+	font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	line-height: 120rpx;
+	color: #222222;
+  float: left;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+
+}
+.shop-r-2{
+  height: 120rpx;
+  float: left;
+  font-size: 30rpx;
+  position: relative;
+  
+
+}
+.maijia{
+  width: 750rpx;
+  height: 120rpx;
+}
+.wuliu{
+  width: 750rpx;
+  height: 120rpx;
+}
+.photo{
+  position: absolute;
+  width: 750rpx;
+  height: 320rpx;
+  top: 398rpx;
+  z-index: 5;
+}
+.photo-list{
+  margin-left: 4%;
+  width: 20%;
+  height: 150rpx;
+  background-color:red;
+  float: left;
+  margin-bottom: 10rpx;
+ 
+}
+.tap{
+
+  float: left;
+  margin-left: 4%;
+  width: 20%;
+  height: 150rpx;
+
+}
+.tap image{
+  width: 100%;
+   height: 150rpx;
+
+}

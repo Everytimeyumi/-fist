@@ -1,0 +1,76 @@
+<view class="container">
+  <view class="status-box">
+    <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
+      {{item}}
+      <view class="{{tabClass[index]}}"></view>
+    </view>
+  </view>
+
+
+
+  <view class="dingdan" wx:for="{{list}}">
+
+    <view class='shop-1'>
+    
+      <image class="left" src="{{item.img}}"></image>
+      <view class='middle'>
+        <text>{{item.title}}</text>
+      </view>
+      <view class='right'>
+        <text class='right-t'>{{'￥'+item.money}}</text>
+        <text class='right-b'>{{'x'+item.num}}</text>
+      </view>
+    </view>
+
+
+    <view class='temp-t'>
+      <view class='temp-left'>{{'订单编号：'+item.code}}</view>
+      <view class='temp-right'>{{'实付：'+item.prices}}</view>
+    </view>
+
+    <view class='bottom'>
+
+      <block wx:if="{{item.status ==0}}">
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+        <!-- <button class="bottom-1"  data-index="{{index}}"  bindtap='tuidan'>退单</button> -->
+        <form report-submit bindsubmit='formSubmit'>
+    <button class='bottom-1' bindtap='tuidan' data-index="{{index}}" form-type='submit'>
+      退单
+    </button>
+  </form>
+
+      </block>
+      <block wx:elif="{{item.status ==1}}">
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+      </block>
+      <block wx:elif="{{item.status ==2}}">
+        <view class='bottom-1' id='{{item.id}}' bindtap='shouhuo'>确认收货</view>
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+      </block>
+      <block wx:elif="{{item.status ==3 && item.discuss == 0}}">
+        <view class='bottom-1' id='{{item.id}}' bindtap='tuihuo'>申请退货</view>
+        <view class='bottom-1' id='{{item.id}}' data-index="{{index}}" bindtap='pingjia'> 评价</view>
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+      </block>
+      <block wx:elif="{{item.status ==3 && item.discuss == 1}}">
+        <view class='bottom-1' id='{{item.id}}' bindtap='tuihuo'>申请退货</view>
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+      </block>
+      <block wx:elif="{{item.status ==4}}">
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+        <view class='bottom-2'>正在退款中，请稍后！</view>
+      </block>
+      <block wx:elif="{{item.status ==5}}">
+        <button class="bottom-1" open-type="share" id='{{shop.id}}'>立即分享</button>
+        <view class='bottom-2'>已退款成功</view>
+      </block>
+     
+
+
+    </view>
+ 
+  </view>
+
+  
+  
+</view>

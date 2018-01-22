@@ -1,0 +1,17 @@
+<view class='head' wx='{{time}}'>
+  <image src='{{time.img}}' class='left'></image>
+  <view class='right'>
+    <view class='tit'>{{time.title}}</view>
+    <view class='r-title'>成团有机会获得免单</view>
+    <!-- <view class='r-txt'>限时抢购</view> -->
+    <view class='r-price'>{{'￥'+ time.tgprice}}</view>
+  </view>
+</view>
+
+<view class='time-1'>
+  <image class='rideo-1' src='{{userInfo.avatarUrl}}'></image>
+  <image class='rideo-2' src='../images/home/wenhao.svg'></image>
+
+ 
+    <button class="time" open-type="share" id='{{time.id}}'>邀请好友来团</button> 
+</view>

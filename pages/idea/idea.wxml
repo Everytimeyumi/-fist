@@ -1,0 +1,12 @@
+<!--pages/idea/idea.wxml-->
+<view class='head'>
+
+  <text class='content'>请输入您的建议</text>
+</view>
+<view class='middle'>
+    <text class='phone'>请输入您的手机号码</text>
+
+</view>
+<view class='foot'>
+  <text>提交</text>
+</view>

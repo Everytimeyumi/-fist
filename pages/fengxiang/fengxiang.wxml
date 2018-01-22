@@ -1,0 +1,20 @@
+<view  wx='{{time}}'>
+<view class='head'>
+  <image src='{{time.img}}' class='left'></image>
+</view>
+<view class='right'>
+  <view class='tit'>{{time.title}}</view>
+  <view class='r-title'>成团有机会获得免单</view>
+  <!-- <view class='r-txt'>限时抢购</view> -->
+  <view class='r-price'>{{'￥'+ time.tgprice}}</view>
+</view>
+
+
+<view class='time-1'>
+  <image class='rideo-1' src='{{url.picurl}}'></image>
+  <image class='rideo-2' src='../images/home/wenhao.svg'></image>
+
+
+  <button class="time" bindtap="Offered"  data-index="{{index}}">参与拼团</button>
+</view>
+</view>

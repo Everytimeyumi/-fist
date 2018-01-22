@@ -1,0 +1,70 @@
+{
+    "pages": [
+        
+        "pages/index/index",
+         "pages/mine/mine",
+         "pages/shop/shop",
+         "pages/comment/comment",
+         "pages/address/address",
+         "pages/payment/payment",
+         "pages/temp/temp",
+         "pages/share/share",
+         "pages/mine-list/mine-list",
+         "pages/sale/sale",
+         "pages/idea/idea",
+         "pages/collect/collect",
+         "pages/redact/redact",
+         "pages/location/location",
+         "pages/Offered/Offered",
+         "pages/site/site",
+         "pages/addlocation/addlocation",
+         "pages/offedlocation/offedlocation",
+         "pages/evaluate/evaluate",
+         "pages/cantuan/cantuan",
+         "pages/fengxiang/fengxiang",
+         "pages/yaoqing/yaoqing",
+         "pages/yaoqing1/yaoqing1",
+         "pages/yaoqing2/yaoqing2"
+        
+         
+
+
+       
+
+         
+
+         
+
+         
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "拼拼省",
+        "navigationBarBackgroundColor": "white",
+        "backgroundColor": "white",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+      "color": "black",
+      "selectedColor": "#ff0066",
+      "borderStyle": "white",
+      "backgroundColor": "white",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "images/home/mine-1.png",
+          "selectedIconPath":"images/home/mine-2.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "iconPath": "images/home/mine-3.png",
+          "selectedIconPath": "images/home/mine-4.png",
+          "text": "个人中心"
+        }
+       
+      ]
+    },
+    "debug": true
+}

@@ -1,0 +1,18 @@
+<view wx:for="{{comment}}">
+  <view class='user'>
+    <view class='portrait'>
+      <image src="{{item.picurl}}"></image>
+      <text class='p-r'>{{item.username}}</text>
+    </view>
+    <view class='user-e'>
+      <block wx:if="{{item.plimg !=null}}">
+        <view class='user-v'>
+          <image src="{{'http://shop.mqvt6.cn'+item.plimg}}"></image>
+        </view>
+      </block>
+
+    </view>
+    <view class='user-d'>{{item.text}}</view>
+    <view class='user-q'>{{item.times}}</view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<view class='shop'>
+ 
+   <view class='text'>描述相符</view> 
+  <view class='shop-r'>
+    <block wx:for="{{stars}}">
+      <image class="star-image" style="left: {{item*75}}rpx" src="{{key > item ?  selectedSrc : normalSrc}}">
+       
+        <view class="item" style="left:0rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  
+  </view>
+</view>
+
+<view>
+  <form bindsubmit="bindSave">
+
+
+    <textarea name="linkMan" class="input" type="text" placeholder="宝贝满足您的期待吗？说说它的优点和美中不足的地方吧" placeholder-placeholder-style='font-size:10rpx' value="{{content}}"></textarea>
+    
+    <view class='photo' >
+     <view wx:for="{{imagePaths}}"> <image class='photo-list' src='{{item.src}}'></image></view>
+      
+      
+    <view class='tap'  data-id="{{index}}" bindtap='chooseimage'><image  src='../images/home/photo.svg'></image></view>
+    </view>
+    <button type="warn" class="save-btn" formType="submit">保存</button>
+  </form>
+
+</view>
+
+

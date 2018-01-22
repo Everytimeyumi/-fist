@@ -1,0 +1,67 @@
+<block class='head' wx="{{shop}}" wx:if="{{shop}}">
+  <view class='top' bindtap="add">
+    <view class='name'>
+      <text class='left'>{{'收货人：'+shop.sname}}</text>
+      <text class='phone'>{{'电话：'+shop.phone}}</text>
+    </view>
+    <view class="add">
+      <text>{{'收货地址：'+shop.forms}}</text>
+    </view>
+  </view>
+
+</block>
+
+
+
+
+
+<block class="head" wx:if="{{shop==null}}">
+  <view class='dizhi' bindtap="add">选择收货地址</view>
+</block>
+
+<view class='white' wx="{{time}}" wx:key="{{index}}">
+  <view class='shop-list'>
+    <text>商品信息</text>
+  </view>
+  <view class='padd'>
+    <view wx='{{carts}}' class='ico'>
+      <icon wx:if="{{carts.selected}}" type="success" color="red" data-index="{{index}}" class="cart-pro-select" bindtap="selectList" />
+      <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList" />
+    </view>
+    <view class='list-1'>
+      <image src="{{time.img}}"></image>
+    </view>
+    <view class='shop-right'>
+      <text class='title'>{{time.title}}</text>
+      <!-- <text class='size'>规格：800ml</text>
+      <text class='size-1'>尺码：瓶</text> -->
+      <!-- <text class='price'>￥0.01元/件</text> -->
+      <text class='price-1'>七天退换</text>
+      <text class='price-1'>正品包邮</text>
+    </view>
+
+
+
+
+
+  </view>
+  <view class='box'>
+    <view class='box-1'>{{'￥'+time.tgprice}}</view>
+    <view class="cart-count-box">
+      <text class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+      <text class="cart-count-num">{{carts.num}}</text>
+      <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+    </view>
+
+  </view>
+
+</view>
+<view class='pay'>
+  <text class='price3'>实付款：{{total}}</text>
+  <!-- <text class='bottom' bindtap="pay">立即支付</text> -->
+  <form report-submit bindsubmit='formSubmit'>
+    <button class='bottom' bindtap='pay' id="{{item.id}}" form-type='submit'>
+      立即支付
+    </button>
+  </form>
+</view>

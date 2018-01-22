@@ -1,0 +1,17 @@
+<!--pages/collect/collect.wxml-->
+<view class='shop-list' wx:for="{{time}}">
+
+  <view class='left'>
+    <image src="{{item.img}}"></image>
+  </view>
+
+  <view class='right'>
+    <view class='right-1'>{{item.title}}</view>
+    <view class='right-4'>{{'￥'+item.tgprice}}</view>
+    <view class='right-5'>{{item.people+'人拼团'}}</view>
+  
+  </view>
+<view class='right-6' bindtap='group' id="{{item.gid}}">发起拼单</view>
+    <view class='right-7' bindtap='delete'id="{{item.id}}">删除</view>
+</view>
+

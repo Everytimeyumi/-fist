@@ -1,0 +1,6 @@
+ <view class='shop-list1 clearfix' wx:for="{{pingtuan}}" wx:key="{{index}}">
+    <image class='list-1' src='{{item.picurl}}'></image>
+    <view class='list-2'>{{item.username}}</view>
+    <view class='list-3'>{{'还差'+ item.people +'人拼成'}}</view>
+    <view class='list-4' bindtap="Offered" id='{{item.id}}' data-index="{{index}}">去参团</view>
+  </view>
